@@ -1,0 +1,9 @@
+Sierra:
+Main:
+Hello world!
+
+MenuOptions:
+This class doesn’t appear to be used. It makes sense to have this code as part of a separate class, since that makes the code in your main file, AirlineAccount, a good bit neater, which is always a worthy pursuit. Since this isn’t the main file, this method didn’t need to be main(), it could have been something like runMenu(), and further, this method could have been global so a MenuOptions object wouldn’t be necessary for running this method, improving that sense of neatness further. Also, good on you for closing the scanner at line 74, best practices are good to practice.
+
+AirlineAccount:
+With all of the user information, there should be some kind of validation. For instance, the scanner for my 4 digit pin allows me to type any number of digits or letters, as does the scanner for birthday, when these should follow a set format. At the very least, the pin shouldn’t accept anything other than numbers. The string “Menu Options:” is printed at line 28 and line 35, so there’s redundancy there. Case 2, booking a flight, doesn’t do anything. Even if the information isn’t stored since this was a palindrome project, it could have at least asked which flight you wanted to book so it didn’t feel incomplete on a user side. The same applies to case 3 and especially to case 4, which really should have had a method attached to it. The palindrome checking code is case sensitive, which doesn’t make logical sense. Meaning, civic is a palindrome, but Civic is not. For readability’s sake, the palindrome code really should have been it’s own method. 
